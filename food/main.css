@@ -1,0 +1,772 @@
+/* @import url('https://fonts.googleapis.com/css?family=Monserrat:400.700&'); */
+
+/*custom properties*/
+:root{
+    --leading: 2em;
+}
+
+body{
+    font-family:'Montserrat', sans-serif;
+    margin: 0;
+}
+/*#307D99*/
+.main-bg{
+    background: url("images/food-bg2.jpg");
+    color: #ffffff;
+    text-align: center;
+    padding: 4em;
+    background-position: 12% 83%;
+    height: 800px;
+}
+
+/* Header details */
+
+header{
+    padding: 1em 0;
+}
+
+.main-bg a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin: 2em 0 1.2em;
+}
+
+h1 span{
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+h1 span::before{
+    content: "";
+    position: absolute;
+    width: 3em;
+    background: #068ebb;
+    height: .4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -.3em;;
+
+}
+
+.main-bg p{
+    font-weight: bold;
+    margin: 0 1em 3em;
+}
+
+.form-container{
+    background-color: #ffffff;
+    margin: 2em -1em 0;
+    padding: 2em;
+}
+
+.clear{
+    position: absolute;
+    top: 84%;
+    color: #999999;
+    margin-left: -25px;
+    margin-top: -25px;
+    cursor: pointer;
+}
+
+
+label{
+    color: #2D7D98;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+}
+
+input[type=text]{
+    border: 1px solid #707070;
+    width: 90%;
+    height: 40px;
+    padding: 1em;
+    border-radius: .5em;
+    box-sizing: border-box;
+}
+
+.form-container p{
+    color: #707070;
+    font-weight: normal;
+    font-size: .9em;
+    margin-bottom: 1.5em;
+    margin-top: .7em;
+}
+
+/* First section */
+
+
+
+.right-col{
+    text-align: center;
+    margin: 3em 1em;
+}
+
+img{
+    width: 100%;
+    
+}
+
+h2{
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::before{
+    content: "";
+    position: absolute;
+    width: 8em;
+    background: #068ebb;
+    height: .4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -.3em;;
+
+}
+
+p{
+    line-height: var(--leading);
+}
+
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.9);
+    z-index:1;
+    place-content: center;
+    color: white;
+    display: none;
+    opacity:0;
+}
+
+.animate-overlay{
+    animation: overlay 3s forwards;
+}
+
+/* Responsiveness */
+@media (max-width: 400px){
+    .food-btn{
+        width: 100px;
+        height: 40px;
+        background-color: orange;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: -40px;
+        align-items: center;
+    }
+
+    .food-btn:hover{
+        background-color: rgb(242, 164, 55) ;
+    }
+
+    .clear{
+        position: absolute;
+        top: 84%;
+        color: #999999;
+        margin-left: -25px;
+        margin-top: -80px;
+        cursor: pointer;
+    }
+
+}
+
+@media (min-width: 730px){
+    section {
+        margin: 0 4em;
+    }
+    .form-container{
+        margin: 2em -4em 0;
+    }
+
+    .food-btn{
+        width: 100px;
+        height: 40px;
+        background-color: orange;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: -40px;
+        align-items: center;
+    }
+
+    .food-btn:hover{
+        background-color: rgb(242, 164, 55) ;
+    }
+
+}
+
+/* Responsiveness */
+
+@media (min-width: 930px){
+    .main-bg{
+        text-align: left;
+    }
+
+    .main-bg p{
+        margin: 0 0 3em;
+    }
+
+    .main-bg section{
+       width: 65%;
+    }
+
+    .form-container{
+        display: block;
+        margin: 2em 0 0;
+        width: 700px;
+        border-radius: .5em;
+        box-shadow: 10px 10px 10px rgba(0,0,0,.3);
+    }
+
+    .food-btn{
+        width: 150px;
+        height: 45px;
+        background-color: orange;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .food-btn:hover{
+        background-color: rgb(242, 164, 55) ;
+    }
+
+    form{
+        display: flex;
+    }
+
+    .form-left{
+        width: 70%;
+    }
+
+    label{
+        margin: 0;
+    }
+    input[type=button]{
+        height: fit-content;
+        font-size: 1.1em;
+        margin-top: 1.3em;
+        padding: .7em 0;
+        width: 30%;
+    }
+
+    .main-bg p{
+        margin-bottom: 0;
+    }
+
+    .authentic {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas: "bowl content";
+    }
+
+    .right-col{
+        grid-area: content;
+        padding: 0 10%;
+        text-align: left;
+        align-self: center;
+    }
+
+    img{
+        grid-area: bowl;
+        margin-left: 0;
+    }
+
+    h2{
+        margin: 0;
+    }
+
+    .top{
+        animation: fadeIn 3s forwards;
+    }
+
+    .foodie {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas: "bowl content";
+    }
+
+    .right-food p{
+        text-align: left;
+    }
+
+    .delivery {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas: "bowl content";
+    }
+
+    .right-delivery{
+        grid-area: content;
+        padding: 0 10%;
+        align-self: center;
+    }
+
+    .right-delivery p{
+        text-align: left;
+    }
+
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(-2em);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    } 
+     
+    
+}
+
+@keyframes overlay{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* Foodie: About and Delivery details: second and third sections */
+
+.foodie{
+    margin: 0;
+}
+
+.authentic>.right-col{
+    margin-bottom: 1em;
+}
+
+.right-food{
+    margin: 3em 1em;
+}
+
+.left-food img{
+    width: 100%;
+}
+
+.delivery{
+    margin: 0;
+}
+
+.left-delivery img{
+    width: 100%;
+}
+
+.end-bg{
+    background: url("images/food-bg2.jpg");
+    color: #ffffff;
+    text-align: center;
+    padding: 4em;
+    background-position: 25% 60%;
+}
+
+.end-bg a{
+    color: seashell;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Footer details */
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3{
+    min-width: 250px;
+    text-align: center;
+    flex: 1;
+}
+
+.footer-col-1 img{
+    width: 10%;
+}
+
+.footer-col-2 img{
+    width: 10%;
+}
+
+.footer-col-3 img{
+    width: 10%;
+}
+
+/* Sign Up and Sign In Button details */
+
+.sign button{
+    justify-content: right;
+    background-color: #f89104;
+    border:none;
+    color: white;
+    box-shadow: black;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+    margin: 2px 10px 5px 0;
+    width: 80px;
+    display: inline-block;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    
+}
+
+/* Popup Query screen details */
+.popup{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    user-select: none;
+    width: 400px;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    z-index: 9999;
+    color: #068ebb;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-in-out;
+}
+
+.popup h3{
+    text-transform: uppercase;
+    position: relative;
+    color: #068ebb;
+}
+
+.popup .btn1,.btn2{
+    background-color: #999999;
+    color: white;
+    border: 1px solid black;
+    box-shadow: black;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+    margin: 2px 10px 5px 0;
+    width: 80px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.food-btn{
+    margin-left: 40px;
+}
+
+.popup .btn1{
+    background: #f89104;
+    margin-left: 10px;
+}
+
+.popup .btn2:hover{
+    transition: 5s;
+    background: #8c8c8c;
+}
+
+.popup .btn1:hover{
+    transition: 5s;
+    background: #d58008;
+}
+
+/* Sign Up and Sign In forms */
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    width: 550px;
+    height: 300px;
+    padding: 50px 25px;
+    background: -webkit-linear-gradient( #08a0d7, #d58008);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.container .login{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #d58008;
+    padding: 3px;
+    padding-bottom: 10px;
+}
+
+.container button{
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    padding: 10px 10px 10px 10px;
+    pointer-events: visible;
+    background: #20c1de;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.container p{
+    color: #ffffff;
+    font-weight: 3px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container input{
+    margin-left: 20px;
+    display: block;
+    padding: 10px;
+    margin: 25px 10px;
+    outline: none;
+    border: solid #000051 1px;
+    color: #000000;
+    width: 100%;
+}
+
+/* Sign Up Pop Up */
+
+.container-up{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    width: 530px;
+    height: 500px;
+    padding: 25px 25px;
+    background: -webkit-linear-gradient( #08a0d7, #d58008);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.container-up .sign-up{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #d58008;
+    padding: 3px;
+    padding-bottom: 10px;
+}
+
+.container-up button{
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    padding: 10px 10px 10px 10px;
+    pointer-events: visible;
+    background: #20c1de;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.container-up p{
+    color: #ffffff;
+    font-weight: 3px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container-up input{
+    display: block;
+    padding: 10px;
+    margin: 25px 10px;
+    outline: none;
+    border: solid #000051 1px;
+    color: #000000;
+    width: 500px;
+    border-radius: 0;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.container-up form{
+    display: block;
+}
+
+/* sign up page */
+
+.sign-up-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    width: 530px;
+    height: 500px;
+    padding: 25px 25px;
+    background: -webkit-linear-gradient( #08a0d7, #d58008);
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+/* For SignUp page */
+.sign-up-container-page{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    padding: 200px 25px;
+    background: -webkit-linear-gradient( #08a0d7, #d58008);
+}
+
+.sign-up-page{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #d58008;
+    padding: 3px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.forgot{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.sign-up-container-page input{
+   display: block;
+   font-size: 16px;
+   margin-bottom: 15px;
+   box-sizing: border-box;
+   width: 700px;
+   height: 40px;
+   border-radius: 0;
+   border: solid #000051 1px;
+   color: #000000;
+   margin-left: 26%;
+   padding: 10px;
+}
+
+.sign-up-container-page form{
+    display: block;
+}
+
+.sign-up-container-page a{
+    color: #ffffff;
+    font-weight: 3px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sign-up-container-page button{
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 43%;
+    padding: 10px 10px 10px 10px;
+    pointer-events: visible;
+    background: #20c1de;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+/* Email Popup */
+.modal{
+    position: absolute;
+    top: 290%;
+    width: 700px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgba(0,0,0,0.8);
+    margin-left: 300px;
+    opacity: 0;
+}
+
+.content{
+    justify-content: center;
+    background-color:#ffffff;
+    padding: 2rem;
+    color: #000000;
+}
+
+input[type=email]{
+    width: 100%;
+    padding: .5rem;
+    display: block;
+}
+
+.content button{
+    display: block;
+    width: 30%;
+    height: 100%;
+    padding: .5rem;
+    margin: 5px;
+    background-color: rgb(65, 169, 225);
+    color: #ffffff;
+    border: none;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: rgb(18, 140, 184);
+}
+
+.close{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -1rem;
+    margin-top: -1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
